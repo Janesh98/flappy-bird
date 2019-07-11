@@ -5,7 +5,7 @@ function Pipe(game_speed) {
   this.bottom = height - (this.top + this.spacing);
   this.x = width;
   this.y = height - this.bottom;
-  this.w = 80;
+  this.w = 325;
   this.highlight = false;
 
   this.show = function() {
@@ -14,8 +14,8 @@ function Pipe(game_speed) {
       //red
       fill(255, 0, 0);
     }
-    rect(this.x, 0, this.w, this.top);
-    rect(this.x, this.y, this.w, this.bottom);
+    image(topPipe, this.x, 0, this.w, this.top);
+    image(bottomPipe, this.x, this.y, this.w, this.bottom);
   }
 
   this.update = function() {

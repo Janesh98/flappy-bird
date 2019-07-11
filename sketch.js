@@ -2,6 +2,16 @@ var bird;
 var pipes = [];
 var game_speed = 6;
 var score;
+var backImg;
+var avatar;
+var pipeImg
+
+function preload() {
+    backImg = loadImage('images/flappy-background.png');
+    bottomPipe = loadImage('images/pipe.png');
+    topPipe = loadImage('images/pipe-flipped.png');
+    avatar = loadImage('images/bird.png');
+}
 
 function setup() {
     createCanvas(640, 480);
@@ -11,7 +21,7 @@ function setup() {
 }
 
 function draw() {
-    background(0);
+    background(backImg);
     bird.show();
     bird.update();
     score.show();
