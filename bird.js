@@ -8,7 +8,7 @@ function Bird() {
 
   this.show = function() {
     fill(255, 50);
-    rect(this.x, this.y, 100, 100);
+    rect(this.x, this.y, this.r, this.r);
     image(avatar, this.x, this.y, this.r, this.r);
   }
 
