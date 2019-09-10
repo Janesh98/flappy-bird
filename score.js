@@ -14,6 +14,6 @@ function Score() {
   }
 
   this.survived = function(bird, pipe) {
-    return bird.x > pipe.x;
+    return bird.x == pipe.x
   }
 }
