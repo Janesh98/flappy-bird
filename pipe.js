@@ -5,17 +5,24 @@ function Pipe(game_speed) {
   this.bottom = height - (this.top + this.spacing);
   this.x = width;
   this.y = height - this.bottom;
-  this.w = 325;
+  this.w = 80;
   this.highlight = false;
 
   this.show = function() {
     fill(255);
     if(this.highlight) {
-      //red
+      // red
       fill(255, 0, 0);
+
     }
-    image(topPipe, this.x, 0, this.w, this.top);
-    image(bottomPipe, this.x, this.y, this.w, this.bottom);
+
+    //rect(this.x, 0, this.w - 138, this.top);
+    fill(100, 255, 100);
+    rect(this.x, 0, this.w, this.top);
+    //image(topPipe, this.x, 0, this.w, this.top);
+    fill(100, 255, 100);
+    rect(this.x, this.y, this.w, this.bottom);
+    //image(bottomPipe, this.x, this.y, this.w, this.bottom);
   }
 
   this.update = function() {
@@ -27,7 +34,9 @@ function Pipe(game_speed) {
   }
 
   this.collides = function(bird) {
-    if (bird.y < this.top || bird.y > this.y) {
+    this.pipe_x = this.w/2;
+    //console.log(bird.x, this.x, this.pipe_x)
+    if (bird.y <= this.top || bird.y >= this.y) {
       if (bird.x > this.x && bird.x < this.x + this.w) {
         this.highlight = true;
         return true;
