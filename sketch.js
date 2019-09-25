@@ -5,7 +5,6 @@ var score;
 var backImg;
 var avatar;
 var pipeImg
-var touches = (touches.length > 0);
 
 function preload() {
     backImg = loadImage('images/flappy-background.png');
@@ -59,22 +58,13 @@ function draw() {
         pipes.splice(i, 1);
       }
 
-<<<<<<< HEAD
       if (touches.length > 0) {
-=======
-      if (touches) {
->>>>>>> b69245cffb109322e1a91955cf5837043d468c7f
           bird.up;
       }
-
-    }
+  }
 }
 
 function keyPressed() {
   if(key == ' ')
     bird.jump();
-}
-
-function touchStarted([event]) {
-    bird.up();return false;
 }
