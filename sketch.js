@@ -59,7 +59,7 @@ function draw() {
       }
 
       if (touches.length > 0) {
-          bird.up;
+          bird.jump;
       }
   }
 }
