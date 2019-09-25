@@ -30,14 +30,14 @@ function Pipe(game_speed) {
   }
 
   this.offscreen = function() {
-    return this.x < -this.w;
+    return this.x < -width;
   }
 
   this.collides = function(bird) {
-    this.pipe_x = this.w/2;
     //console.log(bird.x, this.x, this.pipe_x)
-    if (bird.y <= this.top || bird.y >= this.y) {
-      if (bird.x > this.x && bird.x < this.x + this.w) {
+    //15, 50 and 59.5 are values that perfectly allign the bird to pipe hitbox
+    if (bird.y + 15 <= this.top || bird.y + 50 >= this.y) {
+      if (bird.x + 59.5 >= this.x && bird.x <= this.x + this.w) {
         this.highlight = true;
         return true;
       }
