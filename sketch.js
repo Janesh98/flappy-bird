@@ -48,9 +48,14 @@ function draw() {
         fill(0);
         textSize(64);
         textAlign(CENTER, CENTER);
-        text('GAMEOVER', width / 2, height / 2);
+        text('GAME OVER', width / 2, height / 2);
         textAlign(LEFT, BASELINE);
         noLoop();
+        pipes = [];
+        game_speed = 6
+        bird = new Bird();
+        pipes.push(new Pipe(game_speed));
+        score = new Score();
       }
 
       if(pipes[i].offscreen()) {
