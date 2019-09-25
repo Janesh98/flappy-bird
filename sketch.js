@@ -65,6 +65,6 @@ function keyPressed() {
     bird.jump();
 }
 
-function touchStarted() {
-    bird.up();
+function touchStarted([event]) {
+    bird.up();return false;
 }
