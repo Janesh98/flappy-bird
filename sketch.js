@@ -36,11 +36,15 @@ function draw() {
     }
 
     for(var i = pipes.length-1; i >= 0; i--) {
-      pipes[i].show();
       pipes[i].update();
+      pipes[i].show();
 
-      if(score.survived(bird, pipes[i])) {
-        score.update();
+      //if(score.survived(bird, pipes[i])) {
+        //score.update();
+      //}
+
+      if(pipes[i].pass(bird)) {
+          score.update();
       }
 
       if(pipes[i].collides(bird)) {

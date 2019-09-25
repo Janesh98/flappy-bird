@@ -7,6 +7,7 @@ function Pipe(game_speed) {
   this.y = height - this.bottom;
   this.w = 80;
   this.highlight = false;
+  this.passed = false;
 
   this.show = function() {
     fill(255);
@@ -30,7 +31,7 @@ function Pipe(game_speed) {
   }
 
   this.offscreen = function() {
-    return this.x < -width;
+    return this.x < - width;
   }
 
   this.collides = function(bird) {
@@ -45,4 +46,13 @@ function Pipe(game_speed) {
       return false;
     }
   }
+
+  //this function is used to calculate scores and checks if we've went through the pipes
+this.pass = function(bird) {
+  if (bird.x > this.x && !this.passed) {
+    this.passed = true;
+    return true;
+  }
+  return false;
+}
 }

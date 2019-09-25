@@ -12,8 +12,4 @@ function Score() {
   this.update = function() {
     this.score++;
   }
-
-  this.survived = function(bird, pipe) {
-    return bird.x == pipe.x
-  }
 }
