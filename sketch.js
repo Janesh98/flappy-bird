@@ -45,6 +45,11 @@ function draw() {
 
       if(pipes[i].collides(bird)) {
         console.log("HITS");
+        fill(0);
+        textSize(64);
+        textAlign(CENTER, CENTER);
+        text('GAMEOVER', width / 2, height / 2);
+        textAlign(LEFT, BASELINE);
         noLoop();
       }
 
