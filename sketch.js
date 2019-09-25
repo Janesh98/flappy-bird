@@ -70,3 +70,7 @@ function keyPressed() {
   if(key == ' ')
     bird.jump();
 }
+
+function touchStarted([event]) {
+    bird.up();return false;
+}
