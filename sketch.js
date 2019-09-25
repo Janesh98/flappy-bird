@@ -5,6 +5,7 @@ var score;
 var backImg;
 var avatar;
 var pipeImg
+var touches = (touches.length > 0);
 
 function preload() {
     backImg = loadImage('images/flappy-background.png');
@@ -51,16 +52,17 @@ function draw() {
         text('GAME OVER', width / 2, height / 2);
         textAlign(LEFT, BASELINE);
         noLoop();
-        pipes = [];
-        game_speed = 6
-        bird = new Bird();
-        pipes.push(new Pipe(game_speed));
-        score = new Score();
+
       }
 
       if(pipes[i].offscreen()) {
         pipes.splice(i, 1);
       }
+
+      if (touches) {
+          bird.up;
+      }
+
     }
 }
 
