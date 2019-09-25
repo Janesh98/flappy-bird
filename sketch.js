@@ -39,10 +39,6 @@ function draw() {
       pipes[i].update();
       pipes[i].show();
 
-      //if(score.survived(bird, pipes[i])) {
-        //score.update();
-      //}
-
       if(pipes[i].pass(bird)) {
           score.update();
       }

@@ -47,7 +47,7 @@ function Pipe(game_speed) {
     }
   }
 
-  //this function is used to calculate scores and checks if we've went through the pipes
+  // checks if we've went through the pipes
 this.pass = function(bird) {
   if (bird.x > this.x && !this.passed) {
     this.passed = true;
