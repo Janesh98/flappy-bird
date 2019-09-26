@@ -72,5 +72,6 @@ window.addEventListener('touchstart', function(event) {
   // the user touched the screen!
   event.preventDefault();
   event.stopImmediatePropagation();
+  event.stopPropagation;
   bird.jump();
 });
