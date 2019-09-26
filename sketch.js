@@ -4,7 +4,7 @@ var game_speed = 6;
 var score;
 var backImg;
 var avatar;
-var pipeImg
+var pipeImg;
 
 function preload() {
     backImg = loadImage('images/flappy-background.png');
@@ -58,9 +58,10 @@ function draw() {
         pipes.splice(i, 1);
       }
 
-      if (touches.length > 0) {
-          bird.jump;
-      }
+  }
+
+  if (touches.length > 0) {
+      bird.jump;
   }
 }
 
@@ -69,7 +70,8 @@ function keyPressed() {
     bird.jump();
 }
 
-function touchStarted([event]) {
-    bird.jump;
-    return false;
-}
+
+window.addEventListener('touchstart', function() {
+  // the user touched the screen!
+  bird.jump();
+});
