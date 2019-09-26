@@ -60,9 +60,6 @@ function draw() {
 
   }
 
-  if (touches.length > 0) {
-      bird.jump;
-  }
 }
 
 function keyPressed() {
@@ -71,7 +68,8 @@ function keyPressed() {
 }
 
 
-window.addEventListener('touchstart', function() {
+window.addEventListener('touchstart', function(event) {
   // the user touched the screen!
+  event.preventDefault();
   bird.jump();
 });
