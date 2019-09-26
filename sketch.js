@@ -71,5 +71,6 @@ function keyPressed() {
 window.addEventListener('touchstart', function(event) {
   // the user touched the screen!
   event.preventDefault();
+  event.stopImmediatePropagation();
   bird.jump();
 });
